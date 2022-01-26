@@ -1,0 +1,17 @@
+
+
+import 'package:getx_stack/core/http_helper.dart';
+import 'package:getx_stack/modules/News/models/article_list_response.dart';
+import 'package:injectable/injectable.dart';
+
+import 'news_api.dart';
+
+@lazySingleton
+class NewsAPIService {
+  final api = NewsAPI(HttpHelper().dioClient());
+
+  Future<ArticleListResponse> page() async {
+    return api.page();
+  }
+
+}
