@@ -38,6 +38,7 @@ dependencies:
   dio: ^4.0.4
   retrofit: ^3.0.1
   json_annotation: ^4.3.0
+  injectable: ^1.5.3
 
 dev_dependencies:
   flutter_test:
