@@ -10,5 +10,8 @@ abstract class NewsAPI {
   factory NewsAPI(Dio dio) = _NewsAPI;
 
   @GET("/everything")
-  Future<ArticleListResponse> page();
+  Future<ArticleListResponse> page(
+    @Query("apiKey")  String apiKey,
+    @Query("q") String query,
+  );
 }

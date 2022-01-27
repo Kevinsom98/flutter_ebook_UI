@@ -14,9 +14,9 @@ class _NewsAPI implements NewsAPI {
   String? baseUrl;
 
   @override
-  Future<ArticleListResponse> page() async {
+  Future<ArticleListResponse> page(apiKey, query) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'apiKey': apiKey, r'q': query};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(

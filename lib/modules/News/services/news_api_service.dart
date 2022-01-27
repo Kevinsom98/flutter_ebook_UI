@@ -11,7 +11,7 @@ class NewsAPIService {
   final api = NewsAPI(HttpHelper().dioClient());
 
   Future<ArticleListResponse> page() async {
-    return api.page();
+    return api.page('ab28a52ee6b64e22b19d3fb15b47016f', 'bitcoin');
   }
 
 }
