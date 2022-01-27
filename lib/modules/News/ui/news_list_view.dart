@@ -11,7 +11,17 @@ class NewsListView extends StatelessWidget  {
   Widget build(BuildContext context) {
     return GetBuilder<NewsListController>(
       init: NewsListController(),
-      builder: (_) => Text('Hello world')
+      builder: (_) => ListView.builder(
+        itemCount: _.newsList.length,
+        itemBuilder: (ctx, index) {
+          return Card(
+            child: ListTile(
+              title: Text(_.newsList[index].title!),
+              subtitle: Text(_.newsList[index].content!),
+            )
+          );
+        }
+      )
     );
   }
 

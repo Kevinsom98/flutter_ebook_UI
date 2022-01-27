@@ -13,11 +13,12 @@ class NewsListController extends GetxController  {
   void onInit() {
     // Initializations here
     print("Initing");
-
+    getNewsFeed();
+    
     super.onInit();
   }
 
-  getNewsFeed() {
+  void getNewsFeed() {
     apiService.page()
       .then((response) {
         newsList = response.articles;
