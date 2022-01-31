@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_stack/modules/auth/auth-service.dart';
+import 'package:getx_stack/modules/auth/auth_guard.dart';
 
 import 'app_view.dart';
+import 'modules/login/ui/login_view.dart';
 
-void main() {
+Future<void> main() async {
+  await initServices();
   runApp(const MyApp());
+}
+
+Future<void> initServices() async {
+  print("Initing services");
+  await Get.putAsync<AuthService>(() async => await AuthService());
+  print("Finished initing services");
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +27,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AppView(),
+      initialRoute: '/app',
+      getPages: [
+        GetPage(name: '/app', page: () => AppView(), middlewares: [AuthGuard()]),
+        GetPage(name: '/login', page: () => LoginView())
+      ],
     );
   }
 }

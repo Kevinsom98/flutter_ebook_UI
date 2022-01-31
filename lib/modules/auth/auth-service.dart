@@ -1,7 +1,19 @@
+import 'package:get/get.dart';
 import 'package:injectable/injectable.dart';
 
-@lazySingleton
-class AuthService {
+class AuthService extends GetxService {
+  late final isAuthenticated;
+
+  @override
+  onInit() {
+    print("Initing as setting false");
+    isAuthenticated = false;
+    return super.onInit();
+  }
+
+  // updateAuth() {
+  //   isAuthenticated = false;
+  // }
 
   // void saveUserSession(LoginResponse model) {
   //   AuthPreference.setToken(model.accessToken);
