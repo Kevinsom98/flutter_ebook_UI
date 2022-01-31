@@ -1,6 +1,6 @@
 
 import 'package:dio/dio.dart';
-import 'package:getx_stack/modules/News/models/article_list_response.dart';
+import 'package:getx_stack/modules/news/models/article_list_response.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'news_api.g.dart';

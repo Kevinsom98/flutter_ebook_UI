@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_stack/app_view_controller.dart';
 import 'package:get/get.dart';
-import 'package:getx_stack/modules/News/ui/news_list_view.dart';
+import 'package:getx_stack/modules/news/ui/news_list_view.dart';
 
 class AppView extends StatelessWidget {
   // int _selectedIndex = 0;
