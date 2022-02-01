@@ -1,9 +1,10 @@
 class AuthPreference {
 
-  // static setToken(String token) async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   prefs.setString('PREF_KEY_AUTH_TOKEN', token);
-  // }
+  static setToken(String token) async {
+    // GetStorage box = GetStorage();
+    // SharedPreferences prefs = await SharedPreferences.getInstance();
+    // prefs.setString('PREF_KEY_AUTH_TOKEN', token);
+  }
 
   // static Future<String?> getToken() async {
   //   SharedPreferences prefs = await SharedPreferences.getInstance();

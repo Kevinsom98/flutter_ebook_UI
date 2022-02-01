@@ -1,14 +1,39 @@
 import 'package:get/get.dart';
+import 'package:getx_stack/core/storage_service.dart';
 import 'package:injectable/injectable.dart';
 
 class AuthService extends GetxService {
-  late final isAuthenticated;
+  final storageService = Get.find<StorageService>();
 
   @override
   onInit() {
     print("Initing as setting false");
-    isAuthenticated = false;
     return super.onInit();
+  }
+
+  bool isAuthenticated() {
+    if (storageService.getItem('access_token') != null) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  void saveUserSession(String accessToken) {
+    storageService.setItem('access_token', accessToken);
+  }
+
+  void clearUserSession() {
+    storageService.clearItem('access_token');
+  }
+
+  void saveUserDetails(String email) {
+    storageService.setItem('email', email);
+  }
+
+  void clearUserDetails() {
+    storageService.clearItem('email');
   }
 
   // updateAuth() {

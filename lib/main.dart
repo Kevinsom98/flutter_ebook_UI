@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_stack/core/storage_service.dart';
 import 'package:getx_stack/modules/auth/auth-service.dart';
 import 'package:getx_stack/modules/auth/auth_guard.dart';
 
@@ -13,6 +14,7 @@ Future<void> main() async {
 
 Future<void> initServices() async {
   print("Initing services");
+  await Get.putAsync<StorageService>(() async => await StorageService());
   await Get.putAsync<AuthService>(() async => await AuthService());
   print("Finished initing services");
 }
