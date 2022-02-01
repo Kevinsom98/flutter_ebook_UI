@@ -13,11 +13,9 @@ class AuthGuard extends GetMiddleware {
   @override
   RouteSettings? redirect(String? route) {
       if (authService.isAuthenticated()) {
-        print("Going to app view");
         return RouteSettings(name: '/app');
       }
       else {
-        print("Going to login view");
         return RouteSettings(name: '/login');
       }
   }

@@ -41,6 +41,8 @@ dependencies:
   injectable: ^1.5.3
   logger: ^1.1.0
   localstorage: ^4.0.0+1
+  reactive_forms: ^11.0.1
+  infinite_scroll_pagination: ^3.1.0
 
 dev_dependencies:
   flutter_test:

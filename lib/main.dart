@@ -13,10 +13,8 @@ Future<void> main() async {
 }
 
 Future<void> initServices() async {
-  print("Initing services");
   await Get.putAsync<StorageService>(() async => await StorageService());
   await Get.putAsync<AuthService>(() async => await AuthService());
-  print("Finished initing services");
 }
 
 class MyApp extends StatelessWidget {

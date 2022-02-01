@@ -5,12 +5,6 @@ import 'package:injectable/injectable.dart';
 class AuthService extends GetxService {
   final storageService = Get.find<StorageService>();
 
-  @override
-  onInit() {
-    print("Initing as setting false");
-    return super.onInit();
-  }
-
   bool isAuthenticated() {
     if (storageService.getItem('access_token') != null) {
       return true;
