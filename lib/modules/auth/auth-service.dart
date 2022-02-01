@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:getx_stack/core/storage_service.dart';
-import 'package:injectable/injectable.dart';
 
 class AuthService extends GetxService {
   final storageService = Get.find<StorageService>();
