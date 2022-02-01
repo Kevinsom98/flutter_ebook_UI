@@ -13,7 +13,7 @@ class NewsListController extends GetxController  {
   void onInit() {
     // Initializations here
     print("Initing");
-    getNewsFeed();
+    // getNewsFeed();
     
     super.onInit();
   }

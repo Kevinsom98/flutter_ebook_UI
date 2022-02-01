@@ -32,6 +32,11 @@ class LoginView extends StatelessWidget {
                   formControlName: 'password',
                   decoration: const InputDecoration(labelText: 'Password'),
                 ),
+
+                TextButton(
+                  onPressed: _.loginHandler, 
+                  child: const Text('Login')
+                )
               ],
             )
           )

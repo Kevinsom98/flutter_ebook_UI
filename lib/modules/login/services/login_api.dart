@@ -12,7 +12,7 @@ abstract class LoginAPI {
 
   factory LoginAPI(Dio dio) = _LoginAPI;
 
-  @POST("/login")
+  @POST("/tourist/login")
   Future<LoginResponse> login(@Body() LoginRequest model);
 
   @GET("/me")

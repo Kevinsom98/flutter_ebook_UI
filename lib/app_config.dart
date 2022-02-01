@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 class AppConfig {
 
-  static final AppConfig debugConfig = AppConfig(appName: "App Name", apiUrl: "https://newsapi.org/v2");
+  static final AppConfig debugConfig = AppConfig(appName: "App Name", apiUrl: "https://apex-gta-api.v75inc.dev/api/v1"); //https://newsapi.org/v2
   static final AppConfig prodConfig = AppConfig(appName: "App Name", apiUrl: "");
 
   String appName;

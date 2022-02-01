@@ -23,7 +23,7 @@ class _LoginAPI implements LoginAPI {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<LoginResponse>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/login',
+                .compose(_dio.options, '/tourist/login',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = LoginResponse.fromJson(_result.data!);
