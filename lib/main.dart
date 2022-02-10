@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/app',
       getPages: [
         GetPage(name: '/app', page: () => AppView(), middlewares: [AuthGuard()]),
-        GetPage(name: '/login', page: () => LoginView())
+        GetPage(name: '/login', page: () => LoginView(), middlewares: [AuthGuard()])
       ],
     );
   }
