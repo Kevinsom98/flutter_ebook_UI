@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_stack/core/base/ui_helper.dart';
 import 'package:getx_stack/core/storage_service.dart';
 import 'package:getx_stack/modules/auth/auth-service.dart';
 import 'package:getx_stack/modules/auth/auth_guard.dart';
@@ -26,11 +27,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        backgroundColor: defaultBgColor,
       ),
-      initialRoute: '/app',
+      initialRoute: '/login',
       getPages: [
-        GetPage(name: '/app', page: () => AppView(), middlewares: [AuthGuard()]),
-        GetPage(name: '/login', page: () => LoginView(), middlewares: [AuthGuard()])
+        GetPage(name: '/app', page: () => AppView()),
+        GetPage(name: '/login', page: () => LoginView())
       ],
     );
   }
